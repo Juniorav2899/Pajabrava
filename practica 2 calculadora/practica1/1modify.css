@@ -1,0 +1,64 @@
+nav {
+    background-color: #90c0ff;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content:center;
+    border-bottom: 3px;
+}
+
+nav ul {
+    list-style-type:square;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.inicio {
+    background-color: aqua;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.sobremi1 {
+    background-color: aqua;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.container h1:hover {
+    color: #555;
+}
+
+.container h2:hover {
+
+    color: #555;
+}
+.container h2 li :hover
+
+.container p {
+    line-height: 1.6;
+}
+
+.container ul {
+    padding-left: 100px;
+}
