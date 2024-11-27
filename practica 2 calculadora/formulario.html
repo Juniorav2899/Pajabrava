@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="papri.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+
+        h2 {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1cm solid #bccff1;
+            border-radius: 5px;
+          
+        }
+
+        .form-container input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #bccff1;
+            border-radius: 90px;
+        
+        }
+
+        .form-container button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            width: 20%;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        
+        }
+
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+    <a href="paginaprincipal.html" class="back-button">Regresar</a>
+    <div class="form-container">
+        <h2>Formulario De Registro</h2>
+        <form id="registrationForm">
+
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" required><br><br>
+
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" required><br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" required><br><br>
+
+            <label for="direccion">Direccion:</label>
+            <input type="text" id="direccion" required><br><br>
+
+            <label for="cedula">Cedula:</label>
+            <input type="text" id="cedula" required><br><br>
+
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" required><br><br>
+
+            <button type="submit">Enviar</button>
+            el paja fue que hizo eta jodienda
+        </form>
+        <div class="output" id="output"></output></div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event){
+            event.preventDefault(); //evitar el envio del formulario
+
+            //capturar datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const edad = document.getElementById('edad').value;
+            const direccion = document.getElementById('direccion').value;
+            const cedula = document.getElementById('cedula').value;
+            const nacionalidad = document.getElementById('nacionalidad').value;
+
+            //mostrar datos en la consola
+            console.log("Datos del formulario: ",{
+                nombre,
+                apellido,
+                edad,
+                direccion,
+                cedula,
+                nacionalidad
+            });
+
+            //mostrar datos en la pantalla
+            document.getElementById('output').innerHTML = `
+            <h3>Datos Ingresados:</h3>
+            <p><strong>Nombre:</strong> ${nombre}</p>
+            <p><strong>Apellido:</strong> ${apellido}</p>
+            <p><strong>Edad:</strong> ${edad}</p>
+            <p><strong>Direccion:</strong> ${direccion}</p>
+            <p><strong>Cedula:</strong> ${cedula}</p>
+            <p><strong>Nacionalidad:</strong> ${nacionalidad}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

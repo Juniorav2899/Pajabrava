@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <link rel="stylesheet" href="papri.css">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: 1cm;
+            border-color: black;
+        }
+        img {
+            max-width: 60%;
+            height: auto;
+            
+        }
+        
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: underline;
+            background-color: #bccff1;
+            padding: 20px;
+        }
+
+        button {
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="operaciones.html">Operaciones</a></li>
+            <li><a href="Formulario.html">Formulario</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+        </ul>
+    </nav>
+    <h1>Galeria de Imágenes</h1>
+    <button id="boton-de-cargar-imagen"> _Cargar imagen de Efren Reyes</button>
+    <div class="image-container" id="imageContainer"></div>
+
+    <script>
+        document.getElementById('boton-de-cargar-imagen').addEventListener('click', function() {
+            //aqui se reemplaza la ruta de la imagen
+            const imgUrl = 'efrenreyespool.jpg'; // pon la ruta que quieras con el nombre de la imagen
+            const imgElement = document.createElement('img');
+            imgElement.src = imgUrl;
+            imgElement.alt = 'Imagen cargada';
+            document.getElementById('imageContainer').appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
